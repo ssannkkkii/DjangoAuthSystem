@@ -25,6 +25,10 @@ INSTALLED_APPS += [
     'rest_framework_simplejwt.token_blacklist'
 ]
 
+INSTALLED_APPS += [
+    'accounts.apps.AccountsConfig'
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,6 +74,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTH_USER_MODEL = 'accounts.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
